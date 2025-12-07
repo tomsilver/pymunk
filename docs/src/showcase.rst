@@ -384,6 +384,10 @@ List of papers which has used or mentioned Pymunk:
 
 .. (list made using "Chicago" style citation)
 
+#. Bai, Xiangyu, He Liang, Bishoy Galoaa, Utsav Nandi, Shayda Moezzi, Yuhang He, and Sarah Ostadabbas. 
+   "MoReGen: Multi-Agent Motion-Reasoning Engine for Code-based Text-to-Video Synthesis." 
+   arXiv preprint arXiv:2512.04221 (2025).
+
 #. Zandonati, Ben, Tomás Lozano-Pérez, and Leslie Pack Kaelbling. 
    "Rational Inverse Reasoning." 
    arXiv preprint arXiv:2508.08983 (2025).
