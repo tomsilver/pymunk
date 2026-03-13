@@ -44,6 +44,10 @@ libraries: list[str] = []
 extra_compile_args = []
 if platform.system() != "Windows":
     extra_compile_args.append("-std=c99")
+    # Strict floating-point for deterministic physics. The -O1
+    # overrides setuptools' default -O3 (clang uses the last -O flag).
+    extra_compile_args.append("-ffp-contract=off")
+    extra_compile_args.append("-O1")
 # extra_compile_args.append('/Od')
 # extra_compile_args.append('/DEBUG:FULL')
 # , '/D_CHIPMUNK_FFI'],
@@ -77,7 +81,7 @@ ffibuilder.set_source(
     include_dirs=[os.path.join("Munk2D", "include")],
     sources=sources,
     libraries=libraries,
-    define_macros=[("CP_OVERRIDE_MESSAGE", None)],
+    define_macros=[("CP_OVERRIDE_MESSAGE", None), ("CP_USE_CGTYPES", "0")],
 )
 
 if __name__ == "__main__":
