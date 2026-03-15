@@ -1220,6 +1220,9 @@ void cpSpaceUseSpatialHash(cpSpace *space, cpFloat dim, int count);
 /// Step the space forward in time by @c dt.
 void cpSpaceStep(cpSpace *space, cpFloat dt);
 
+/// Clear all cached arbiter impulses (warm-starting data).
+void cpSpaceClearCachedArbiters(cpSpace *space);
+
 // MARK: Debug API
 
 /// Color type to use with the space debug drawing API.
