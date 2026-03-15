@@ -8,8 +8,8 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pymunk"
-version = "7.1.0" # remember to change me for new versions!
+name = "pymunk-deterministic"
+version = "7.1.0.post1"
 # Require cffi >1.14.0 since that (and older) has problem with returing structs from functions.
 # Require cffi >= 1.17.1 since older cant work with latest setuptools version
 dependencies = [
@@ -18,7 +18,7 @@ dependencies = [
 ]
 authors = [{ name = "Victor Blomqvist", email = "vb@viblo.se" }]
 readme = "README.rst"
-description = "Pymunk is a easy-to-use pythonic 2D physics library"
+description = "Fork of pymunk with a deterministic solver for reproducible simulation"
 keywords = ["pygame", "2d", "physics", "rigid body"]
 license = "MIT"
 license-files = ["LICENSE.txt"]
@@ -38,11 +38,9 @@ requires-python = ">=3.9"
 [project.optional-dependencies]
 dev = ["pyglet", "pygame", "sphinx", "aafigure", "wheel", "matplotlib", "numpy"]
 [project.urls]
-Homepage = "https://www.pymunk.org"
-Documentation = "https://www.pymunk.org"
-Repository = "https://github.com/viblo/pymunk.git"
-Issues = "https://github.com/viblo/viblo/issues"
-Changelog = "https://github.com/viblo/pymunk/blob/master/CHANGELOG.rst"
+Homepage = "https://github.com/tomsilver/pymunk"
+Repository = "https://github.com/tomsilver/pymunk.git"
+Issues = "https://github.com/tomsilver/pymunk/issues"
 
 [tool.setuptools.package-data]
 "pymunk.examples" = ["*.png", "*.wav"]
